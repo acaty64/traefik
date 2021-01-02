@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+export APP_PORT=${APP_PORT:-80}
+export MYSQL_PORT=${DB_PORT:-3306}
+export MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-secret}
+export MYSQL_DATABASE=${MYSQL_DATABASE:-firma}
+export MYSQL_USER=${MYSQL_USER:-root}
+export MYSQL_PASSWORD=${MYSQL_PASSWORD:-secret}
+
+# export APP="nginx"
+export APP="web-1"
+
+COMPOSE="docker-compose"
+PSRESULT=$(docker-compose ps -q)
+
+if [ ! -z "$PSRESULT" ]; then
+    EXEC="yes"
+else
+    EXEC="no"
+fi
+
+if [ $# -gt 0 ]; then
+
+    if [ -f .env ]; then
+        source .env
+    fi
+
+    if [ "$1" == "start" ]; then
+        $COMPOSE up -d
+    elif [ "$1" == "stop" ]; then
+        $COMPOSE down
+    elif [ "$1" == "restart" ]; then
+        $COMPOSE down
+        $COMPOSE up -d
+
+    elif [ "$1" == "art" ]; then
+        shift 1
+        if [ "$EXEC" == "yes" ]; then
+            $COMPOSE exec \
+                "$APP" \
+                php artisan "$@"
+        else
+            $COMPOSE run --rm \
+                -w /var/www/html \
+                "$APP" \
+                php artisan "$@"
+        fi
+    elif [ "$1" == "composer" ]; then
+        shift 1
+        if [ "$EXEC" == "yes" ]; then
+            $COMPOSE exec \
+                "$APP" \
+                composer "$@"
+        else
+            $COMPOSE run --rm \
+                -w /var/www/html \
+                "$APP" \
+                composer "$@"
+        fi
+
+    elif [ "$1" == "test" ]; then
+        shift 1
+        if [ "$EXEC" == "yes" ]; then
+            $COMPOSE exec \
+                "$APP" \
+                ./vendor/bin/phpunit "$@"
+        else
+            $COMPOSE run --rm \
+                -w /var/www/html \
+                "$APP" \
+                ./vendor/bin/phpunit "$@"
+        fi
+    elif [ "$1" == "npm" ]; then
+        shift 1
+        if [ "$EXEC" == "yes" ]; then
+            $COMPOSE exec \
+                "$APP" \
+                npm "$@"
+                # node \
+                # npm "$@"
+        else
+            $COMPOSE run --rm \
+                -w /var/www/html \
+                node \
+                npm "$@"
+        fi
+    elif [ "$1" == "gulp" ]; then
+        shift 1
+        if [ "$EXEC" == "yes" ]; then
+            $COMPOSE exec \
+                node \
+                ./node_modules/.bin/gulp "$@"
+        else
+            $COMPOSE run --rm \
+                -w /var/www/html \
+                node \
+                ./node_modules/.bin/gulp "$@"
+        fi
+    elif [ "$1" == "yarn" ]; then
+        shift 1
+        if [ "$EXEC" == "yes" ]; then
+            $COMPOSE exec \
+                node \
+                yarn "$@"
+        else
+            $COMPOSE run --rm \
+                -w /var/www/html \
+                node \
+                yarn "$@"
+        fi
+    else
+        $COMPOSE "$@"
+    fi
+else
+    $COMPOSE ps
+fi

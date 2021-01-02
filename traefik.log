@@ -1,0 +1,74 @@
+{"level":"info","msg":"I have to go...","time":"2021-01-01T16:35:24Z"}
+{"level":"info","msg":"Stopping server gracefully","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"traefik","level":"debug","msg":"Waiting 10s seconds before killing connections.","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"http","level":"debug","msg":"Waiting 10s seconds before killing connections.","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"traefik","level":"debug","msg":"Entry point traefik closed","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:35:24Z"}
+{"level":"debug","msg":"Provider event received {Status:die ID:86048d0d91312b029b151fb31aee983792d7b90a5e984e3404d9dede913647aa From:nginx Type:container Action:die Actor:{ID:86048d0d91312b029b151fb31aee983792d7b90a5e984e3404d9dede913647aa Attributes:map[com.docker.compose.config-hash:25d75466f864e7d3b9e2d3491a323a5d6a746b1526bf8203a974f0561707d5df com.docker.compose.container-number:1 com.docker.compose.oneoff:False com.docker.compose.project:traefik com.docker.compose.project.config_files:docker-compose.yml com.docker.compose.project.working_dir:/home/ana/code/traefik com.docker.compose.service:nginx com.docker.compose.version:1.27.4 environment:dev exitCode:0 image:nginx maintainer:NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e name:nginx traefik.http.routers.nginx.rule:Host(`nginx.app.test`)]} Scope:local Time:1609518924 TimeNano:1609518924601398598}","providerName":"docker","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"http","level":"debug","msg":"Entry point http closed","time":"2021-01-01T16:35:24Z"}
+{"level":"info","msg":"Server stopped","time":"2021-01-01T16:35:24Z"}
+{"level":"info","msg":"Shutting down","time":"2021-01-01T16:35:24Z"}
+{"level":"debug","module":"api","msg":"FIXME: Got an status-code for which error does not match any expected type!!!: -1","status_code":"-1","time":"2021-01-01T16:35:24Z"}
+{"level":"warning","msg":"Failed to inspect container 86048d0d91312b029b151fb31aee983792d7b90a5e984e3404d9dede913647aa, error: error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/86048d0d91312b029b151fb31aee983792d7b90a5e984e3404d9dede913647aa/json\": context canceled","providerName":"docker","time":"2021-01-01T16:35:24Z"}
+{"level":"debug","module":"api","msg":"FIXME: Got an status-code for which error does not match any expected type!!!: -1","status_code":"-1","time":"2021-01-01T16:35:24Z"}
+{"level":"warning","msg":"Failed to inspect container 1d52c881a8e8fd8c4f0168e35ef49447d5c5f8c98865cccb9ff3b42059e857a7, error: error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/1d52c881a8e8fd8c4f0168e35ef49447d5c5f8c98865cccb9ff3b42059e857a7/json\": context canceled","providerName":"docker","time":"2021-01-01T16:35:24Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T16:35:24Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:41:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:41:20Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T16:41:20Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T16:41:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:43:33Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T16:43:33Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:43:33Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T16:43:33Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T16:43:33Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T16:49:02Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:49:02Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:49:02Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T16:49:02Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T16:50:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:50:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:50:54Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T16:50:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:53:17Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T16:53:17Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T16:53:17Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T16:53:17Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T16:53:17Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T17:36:59Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T17:36:59Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T17:36:59Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T17:36:59Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T17:56:19Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T17:56:19Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T17:56:19Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T17:56:19Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T18:01:57Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T18:01:57Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T18:01:57Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T18:01:57Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T18:01:58Z"}
+{"level":"error","msg":"Router defined multiple times with different configurations in [nginx-traefik-dfadc0622d13d6fa2e322ae33cd3a45a1f2ee4be4e2d9943388077e50fd676de web-1-traefik-18d832e26ea51aedec119f99c4e86b44e29110792c7ebb2fb15a1d57750bd3cb]","providerName":"docker","routerName":"nginx","time":"2021-01-01T18:03:17Z"}
+{"level":"error","msg":"Router defined multiple times with different configurations in [nginx-traefik-dfadc0622d13d6fa2e322ae33cd3a45a1f2ee4be4e2d9943388077e50fd676de web-1-traefik-18d832e26ea51aedec119f99c4e86b44e29110792c7ebb2fb15a1d57750bd3cb]","providerName":"docker","routerName":"nginx","time":"2021-01-01T18:41:28Z"}
+{"level":"error","msg":"Router defined multiple times with different configurations in [nginx-traefik-dfadc0622d13d6fa2e322ae33cd3a45a1f2ee4be4e2d9943388077e50fd676de web-1-traefik-18d832e26ea51aedec119f99c4e86b44e29110792c7ebb2fb15a1d57750bd3cb]","providerName":"docker","routerName":"nginx","time":"2021-01-01T18:41:31Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T18:42:12Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T18:42:12Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T18:42:12Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T18:42:12Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T18:42:12Z"}
+{"level":"error","msg":"Router defined multiple times with different configurations in [nginx-traefik-bcdb139be6dc4d4fee9faae0b1f25e9cf4f7cb0994289023d9cc05b3b7ed6852 web-1-traefik-c5872b8eb28e5945804e1a2bab0c947079a0ed26124bec81206a93d2c855b760]","providerName":"docker","routerName":"nginx","time":"2021-01-01T18:43:23Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T18:55:11Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T18:55:11Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T18:55:11Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T18:55:11Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T18:55:12Z"}
+{"level":"error","msg":"Router defined multiple times with different configurations in [nginx-traefik-04d47fc71e3d19f7f0ba4667e66ad2ca301274925582019b3e7cbf61cf7b0059 web-1-traefik-7eddcf4ec8d43a84c3a042af2ddbd1e459f7aac96e07d292042b6db8265d65f8]","providerName":"docker","routerName":"nginx","time":"2021-01-01T18:56:40Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-01-01T19:10:39Z"}
+{"entryPointName":"http","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-01-01T19:10:39Z"}
+{"entryPointName":"http","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-01-01T19:10:39Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-01-01T19:10:39Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-01-01T19:10:39Z"}
+{"level":"error","msg":"Router defined multiple times with different configurations in [nginx-traefik-b95aa5451293b8b68aca249151168621bf4e3fe0565e1a35fbfc64f3e2b356f5 web-1-traefik-93324b694c0436d259a3cf41c43c20fae9468d080aaa8eecad5d80d84bfacb27]","providerName":"docker","routerName":"nginx","time":"2021-01-02T15:07:15Z"}

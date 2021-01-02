@@ -1,0 +1,18 @@
+#traefik.yml
+#https://codigofacilito.com/videos/introduccion-96456894-edd1-43ed-932a-3ccc2d370c3f
+# TRAEFIK
+
+api:
+    insecure: true
+
+providers:
+    docker:
+        endpoint: "unix:///var/run/docker.sock"
+        exposedByDefault: false
+        # constraints: "Label(`environment`, `production`)"
+        constraints: "Label(`environment`,`dev`) || Label(`environment`, `production`)  || Label(`environment`, `testing`)"
+
+log:
+    filePath: "traefik.log"
+    level: ERROR
+    format: json

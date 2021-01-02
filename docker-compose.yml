@@ -1,0 +1,84 @@
+#docker-compose.yml
+#https://codigofacilito.com/videos/introduccion-96456894-edd1-43ed-932a-3ccc2d370c3f
+# TRAEFIK
+
+version: '3'
+
+# Services
+services:
+    proxy:
+        image: traefik:v2.1
+        container_name: proxy
+        ports:
+            - "80:80"
+            - "8080:8080"
+
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./traefik.yml:/traefik.yml
+            - ./traefik.log:/traefik.log
+
+    nginx:
+        image: nginx
+        container_name: nginx
+        labels:
+            - "environment=dev"
+            - "traefik.enable=true"
+            - "traefik.http.routers.nginx.rule=Host(`nginx.app.test`)"
+
+    web-0:
+        image: ucssfcec/nginx-php
+        container_name: nginx-ucssfcec
+        restart: always
+        labels:
+            - "environment=production"
+            - "traefik.enable=true"
+            - "traefik.http.routers.app.rule=Host(`traefik.ucssfcec.xyz`)"
+        volumes:
+            - ~/code/ucssfcec:/usr/share/nginx/html:rw
+        links:
+            - mysql
+
+    web-1:
+        image: firma/nginx-php
+        # build:
+        #   context: ./dockerfiles/nginx-php
+        #   dockerfile: Dockerfile
+        container_name: nginx-firma
+        restart: always
+        labels:
+            - "environment=production"
+            - "traefik.enable=true"
+            - "traefik.http.routers.nginx.rule=Host(`traefik.firma.ucssfcec.xyz`)"
+        volumes:
+          # - ~/code/firma:/var/www/html:rw
+          - ~/code/firma:/usr/share/nginx/html:rw
+        links:
+          - mysql
+
+    mysql:
+        container_name: mysql
+        image: mysql:5.7
+        labels:
+            - "environment=production"
+            - "traefik.enable=true"
+        ports:
+          - "${DB_PORT}:3306"
+        environment:
+          MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+          MYSQL_USER: "${MYSQL_USER}"
+          MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+        volumes:
+          - /var/lib/mysql:/var/lib/mysql
+          - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+          - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
+
+
+
+
+
+
+      #   labels:
+      #       - "environment=production"
+      #       - "traefik.enable=true"
+      #       - "traefik.http.routers.nginx.rule=Host(`traefik.nginx.ucssfcec.xyz`)"
