@@ -24,7 +24,7 @@ services:
         labels:
             - "environment=dev"
             - "traefik.enable=true"
-            - "traefik.http.routers.nginx.rule=Host(`nginx.app.test`)"
+            - "traefik.http.routers.nginx.rule=Host(`traefik.nginx.ucssfcec.xyz`)"
 
     web-0:
         image: ucssfcec/nginx-php
@@ -33,7 +33,7 @@ services:
         labels:
             - "environment=production"
             - "traefik.enable=true"
-            - "traefik.http.routers.app.rule=Host(`traefik.ucssfcec.xyz`)"
+            - "traefik.http.routers.web-0.rule=Host(`traefik.ucssfcec.xyz`)"
         volumes:
             - ~/code/ucssfcec:/usr/share/nginx/html:rw
         links:
@@ -49,7 +49,7 @@ services:
         labels:
             - "environment=production"
             - "traefik.enable=true"
-            - "traefik.http.routers.nginx.rule=Host(`traefik.firma.ucssfcec.xyz`)"
+            - "traefik.http.routers.web-1.rule=Host(`traefik.firma.ucssfcec.xyz`)"
         volumes:
           # - ~/code/firma:/var/www/html:rw
           - ~/code/firma:/usr/share/nginx/html:rw
