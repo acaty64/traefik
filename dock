@@ -7,7 +7,13 @@ export MYSQL_USER=${MYSQL_USER:-root}
 export MYSQL_PASSWORD=${MYSQL_PASSWORD:-secret}
 
 # export APP="nginx"
+#
+# Firma
 export APP="web-1"
+# Laravel-websockets
+export APP="web-2"
+# api-websockets
+#export APP="web-3"
 
 COMPOSE="docker-compose"
 PSRESULT=$(docker-compose ps -q)
@@ -27,11 +33,11 @@ if [ $# -gt 0 ]; then
     if [ "$1" == "start" ]; then
         $COMPOSE up -d
     elif [ "$1" == "stop" ]; then
+        /etc/init.d/apache2 stop
         $COMPOSE down
     elif [ "$1" == "restart" ]; then
         $COMPOSE down
         $COMPOSE up -d
-
     elif [ "$1" == "art" ]; then
         shift 1
         if [ "$EXEC" == "yes" ]; then

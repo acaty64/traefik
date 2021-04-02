@@ -10,16 +10,21 @@ entryPoints:
         address: ":80"
     websecure:
         address: ":443"
-    ws:
-        address: ":6001"
 
 providers:
     docker:
         endpoint: "unix:///var/run/docker.sock"
-        # exposedByDefault: true        #### Genera error, no cierra bien el puerto 80 Apache
         exposedByDefault: false
         # constraints: "Label(`environment`, `production`)"
         constraints: "Label(`environment`,`dev`) || Label(`environment`, `production`)  || Label(`environment`, `testing`)"
+
+certificatesResolvers:
+    myresolver:
+        acme:
+            email: acaty2@gmail.com
+            storage: ./acme.json
+            httpChallenge:
+                entryPoint: web
 
 log:
     filePath: "traefik.log"

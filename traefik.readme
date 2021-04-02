@@ -1,0 +1,57 @@
+traefik.readme
+
+*******************************************
+*******************************************
+*******************************************
+Error starting userland proxy: listen tcp 0.0.0.0:80: bind: address already in use
+
+https://github.com/laradock/laradock/issues/16
+
+Revisar el puerto 80
+sudo netstat -nlp | grep 80
+
+Si aparece Apache corriendo
+
+Resolví ese problema simplemente deteniendo apache en ubuntu xenial.
+
+
+sudo /etc/init.d/apache2 stop
+
+*******************************************
+*******************************************
+
+
+
+
+????????????????????????????????????????????????????
+ERROR
+WebSocket connection to 'ws://api-websockets.test:6001/app/111171ff9970d51cdb41?protocol=7&client=js&version=4.3.1&flash=false' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+
+
+FUENTE RESPUESTA
+https://stackoverflow.com/questions/63547392/traefik-2-2-docker-websocket-ws-not-working
+
+
+version: "3.3"
+services:
+
+  traefik:
+    image: "traefik:v2.2"
+    container_name: "traefik"
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+#      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entryPoints.ws.address=:81" #I ADDED THIS
+      - "--accesslog"
+    ports:
+      - "80:80"
+      - "81:81" #I ADDED THIS
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+
+
