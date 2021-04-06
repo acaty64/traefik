@@ -38,8 +38,8 @@ services:
     #         - "traefik.http.routers.web-0.rule=Host(`traefik.ucssfcec.xyz`)"
     #     volumes:
     #         - ~/code/ucssfcec:/usr/share/nginx/html:rw
-    #     links:
-    #         - mysql
+        # networks:
+        #     - stydenet
 
     web-1:
         image: firma/nginx-php
@@ -54,8 +54,8 @@ services:
             - "traefik.http.routers.web-1.rule=Host(`traefik.firma.ucssfcec.xyz`)"
         volumes:
           - ~/code/firma:/usr/share/nginx/html:rw
-        links:
-          - mysql
+        networks:
+            - stydenet
 
     web-2:
         image: new-websockets/app
@@ -79,56 +79,18 @@ services:
         volumes:
           - ~/code/new-websockets:/var/www/html:rw
           # - ~/code/new-websockets:/usr/share/nginx/html:rw
-        links:
-          - mysql
-
-    # web-2:
-    #     image: websockets/nginx-php
-    #     # image: api/nginx-php
-    #     # image: api-websockets/app:latest
-    #     # build:
-    #     #   context: ./dockerfiles/nginx-php
-    #     #   dockerfile: Dockerfile
-    #     container_name: nginx-websockets
-    #     restart: always
-    #     ports:
-    #         - "6001:6001"
-    #     labels:
-    #         - "environment=production"
-    #         - "traefik.enable=true"
-    #         - "traefik.http.routers.web-2.rule=Host(`traefik.websockets.ucssfcec.xyz`)"
-    #         - "--entrypoints.web.address=:80"
-    #         - "--entryPoints.ws.address=:6001"
-    #         # - "traefik.http.routers.web-2.entrypoints=websecure"
-    #         # - "traefik.http.routers.web-2.tls.certresolver=myresolver"
-    #     volumes:
-    #       - ~/code/laravel-websockets:/usr/share/nginx/html:rw
-    #     links:
-    #       - mysql
-
-    # web-3:
-    #     image: api-websockets/nginx-php
-    #     # image: api/nginx-php
-    #     # image: api-websockets/app:latest
-    #     # build:
-    #     #   context: ./dockerfiles/nginx-php
-    #     #   dockerfile: Dockerfile
-    #     container_name: nginx-api
-    #     restart: always
-    #     ports:
-    #         - "6001:6001"
-    #     labels:
-    #         - "environment=production"
-    #         - "traefik.enable=true"
-    #         - "traefik.http.routers.web-3.rule=Host(`api-websockets.test`)"
-    #         - "--entrypoints.web.address=:80"
-    #         - "--entryPoints.ws.address=:6001"
-    #         # - "traefik.http.routers.web-3.entrypoints=websecure"
-    #         # - "traefik.http.routers.web-3.tls.certresolver=myresolver"
-    #     volumes:
-    #       - ~/code/api-websockets:/usr/share/nginx/html:rw
-    #     links:
-    #       - mysql
+        networks:
+            - stydenet
+    node:
+        container_name: node
+        image: node:9.8
+        restart: unless-stopped
+        tty: true
+        working_dir: /var/www/html
+        volumes:
+         - ~/code/new-websockets:/var/www/html
+        networks:
+         - stydenet
 
     mysql:
         container_name: mysql
@@ -146,4 +108,9 @@ services:
           - /var/lib/mysql:/var/lib/mysql
           - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
           - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
+        networks:
+         - stydenet
 
+networks:
+    stydenet:
+        driver: "bridge"
