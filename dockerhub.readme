@@ -1,0 +1,37 @@
+dockerhub.readme
+
+Fuente: https://styde.net/publicar-imagenes-de-docker-en-docker-hub/
+
+********************************************************
+** Vemos las imagenes creadas
+~/code/proyecto$> docker images
+
+
+********************************************************
+** Renombrar la imagen agregando el namespace (acaty64/)
+
+~/code/proyecto$> docker tag <ID> <NAMESPACE>/<NOMBRE>:<VERSION o TAG>
+
+Ex:
+~/code/proyecto$> docker tag 02bf2115f83b acaty64/firma:1.0.0
+
+
+********************************************************
+** Loguearse en Docker Hub
+
+~/code/proyecto$> docker login
+
+Username: acaty64
+Password: ********
+
+Respuesta: Login Succeeded
+
+
+********************************************************
+** Subir la imagen al repositorio
+
+~/code/proyecto$> docker push <NAMESPACE>/<NOMBRE>:<VERSION>
+
+********************************************************
+
+

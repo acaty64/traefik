@@ -14,7 +14,6 @@ services:
             - "80:80"
             - "443:443"
             - "8080:8080"       # traefik dashboard
-
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - ./traefik.yml:/traefik.yml
@@ -26,20 +25,19 @@ services:
         labels:
             - "environment=dev"
             - "traefik.enable=true"
-            - "traefik.http.routers.nginx.rule=Host(`traefik.nginx.ucssfcec.xyz`)"
+            - "traefik.http.routers.nginx.rule=Host(`traefik.nginx.ucssfcec.local`)"
 
-    # web-0:
-    #     image: ucssfcec/nginx-php
-    #     container_name: nginx-ucssfcec
-    #     restart: always
-    #     labels:
-    #         - "environment=production"
-    #         - "traefik.enable=true"
-    #         - "traefik.http.routers.web-0.rule=Host(`traefik.ucssfcec.xyz`)"
-    #     volumes:
-    #         - ~/code/ucssfcec:/usr/share/nginx/html:rw
-        # networks:
-        #     - stydenet
+    web-0:
+        image: acaty/ucssfcec:1.0.1
+        container_name: nginx-ucssfcec
+        restart: always
+        labels:
+            - "environment=production"
+            - "traefik.enable=true"
+            - "traefik.http.routers.web-0.rule=Host(`traefik.ucssfcec.local`)"
+        volumes:
+            - ~/code/ucssfcec:/var/www/html:rw
+            # - ~/code/ucssfcec:/usr/share/nginx/html:rw
 
     web-1:
         image: firma/nginx-php
@@ -51,11 +49,9 @@ services:
         labels:
             - "environment=production"
             - "traefik.enable=true"
-            - "traefik.http.routers.web-1.rule=Host(`traefik.firma.ucssfcec.xyz`)"
+            - "traefik.http.routers.web-1.rule=Host(`traefik.firma.ucssfcec.local`)"
         volumes:
-          - ~/code/firma:/usr/share/nginx/html:rw
-        networks:
-            - stydenet
+            - ~/code/firma:/usr/share/nginx/html:rw
 
     web-2:
         image: new-websockets/app
@@ -71,7 +67,7 @@ services:
         labels:
             - "environment=production"
             - "traefik.enable=true"
-            - "traefik.http.routers.web-2.rule=Host(`traefik.websockets.ucssfcec.xyz`)"
+            - "traefik.http.routers.web-2.rule=Host(`traefik.websockets.ucssfcec.local`)"
             - "--entrypoints.web.address=:80"
             - "--entryPoints.ws.address=:6001"
             # - "traefik.http.routers.web-2.entrypoints=websecure"
@@ -79,18 +75,6 @@ services:
         volumes:
           - ~/code/new-websockets:/var/www/html:rw
           # - ~/code/new-websockets:/usr/share/nginx/html:rw
-        networks:
-            - stydenet
-    node:
-        container_name: node
-        image: node:9.8
-        restart: unless-stopped
-        tty: true
-        working_dir: /var/www/html
-        volumes:
-         - ~/code/new-websockets:/var/www/html
-        networks:
-         - stydenet
 
     mysql:
         container_name: mysql
@@ -108,9 +92,4 @@ services:
           - /var/lib/mysql:/var/lib/mysql
           - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
           - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
-        networks:
-         - stydenet
 
-networks:
-    stydenet:
-        driver: "bridge"

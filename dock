@@ -11,7 +11,7 @@ export MYSQL_PASSWORD=${MYSQL_PASSWORD:-secret}
 # Firma
 export APP="web-1"
 # Laravel-websockets
-export APP="web-2"
+#export APP="web-2"
 # api-websockets
 #export APP="web-3"
 
@@ -31,9 +31,9 @@ if [ $# -gt 0 ]; then
     fi
 
     if [ "$1" == "start" ]; then
+        /etc/init.d/apache2 stop
         $COMPOSE up -d
     elif [ "$1" == "stop" ]; then
-        /etc/init.d/apache2 stop
         $COMPOSE down
     elif [ "$1" == "restart" ]; then
         $COMPOSE down

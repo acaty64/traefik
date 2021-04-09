@@ -21,6 +21,9 @@ providers:
         # constraints: "Label(`environment`, `production`)"
         constraints: "Label(`environment`,`dev`) || Label(`environment`, `production`)  || Label(`environment`, `testing`)"
 
+
+
+
 log:
     filePath: "traefik.log"
     level: ERROR

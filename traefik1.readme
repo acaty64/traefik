@@ -1,0 +1,41 @@
+Fuente: https://codigofacilito.com/videos/introduccion-96456894-edd1-43ed-932a-3ccc2d370c3f
+
+https://codigofacilito.com/videos/https
+
+
+
+https://doc.traefik.io/traefik/reference/static-configuration/file/
+
+*****************************************
+Agregar en: /traefik.yml
+
+certificatesResolvers:
+  myresolver:
+    acme:
+      email: foobar@nnnn.com
+      storage: acme.json
+      httpChallenge:
+        entryPoint: web
+
+Generar el archivo acme.json
+
+$> touch acme.json
+$> chmod 0600 acme.json
+
+
+
+*****************************************
+Agregar en: docker-compose.yml
+
+reverse-proxy
+	ports:
+		- "443:443"
+	volumes: ./acme.json:/acme.json
+
+
+en cada imagen (xex xxxx) agregar:
+
+labels:
+	- "traefik.http.routes.xxxx.entrypoints=websecure"
+	- "traefik.http.routes.xxxx.tls.certresolver=myresolver"
+
