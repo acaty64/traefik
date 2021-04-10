@@ -11,9 +11,7 @@ export MYSQL_PASSWORD=${MYSQL_PASSWORD:-secret}
 # Firma
 export APP="web-1"
 # Laravel-websockets
-#export APP="web-2"
-# api-websockets
-#export APP="web-3"
+export APP="web-2"
 
 COMPOSE="docker-compose"
 PSRESULT=$(docker-compose ps -q)
