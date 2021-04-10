@@ -36,8 +36,9 @@ services:
             - "traefik.enable=true"
             - "traefik.http.routers.web-0.rule=Host(`traefik.ucssfcec.local`)"
         volumes:
-            - ~/code/ucssfcec:/var/www/html:rw
-            # - ~/code/ucssfcec:/usr/share/nginx/html:rw
+            # - ~/code/ucssfcec:/var/www/html:rw
+            - ~/code/ucssfcec:/usr/share/nginx/html:rw
+            - ./dockerfiles/sites-available/ucssfcec.local:/etc/nginx/sites-available/default
 
     web-1:
         image: acaty/firma:1.0.2

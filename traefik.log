@@ -297,3 +297,21 @@
 {"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-04-09T15:06:50Z"}
 {"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-04-09T15:06:50Z"}
 {"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-04-09T15:06:50Z"}
+{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-04-10T02:42:06Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-04-10T02:42:07Z"}
+{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-04-10T02:47:21Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-04-10T02:47:22Z"}
