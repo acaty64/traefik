@@ -9,8 +9,8 @@ export MYSQL_PASSWORD=${MYSQL_PASSWORD:-secret}
 # export APP="nginx"
 #
 # Firma
-export APP="web-1"
-# Laravel-websockets
+# export APP="web-1"
+# Call8
 export APP="web-2"
 
 COMPOSE="docker-compose"

@@ -62,21 +62,21 @@ services:
         # build:
         #   context: ./dockerfiles/nginx-php
         #   dockerfile: Dockerfile
-        container_name: call
+        container_name: nginx-websockets
         restart: always
         ports:
             - "6001:6001"
         labels:
             - "environment=production"
             - "traefik.enable=true"
-            - "traefik.http.routers.web-2.rule=Host(`call.ucssfcec.work`)"
+            - "traefik.http.routers.web-2.rule=Host(`traefik.websockets.ucssfcec.local`)"
             - "--entrypoints.web.address=:80"
             - "--entryPoints.ws.address=:6001"
             # - "traefik.http.routers.web-2.entrypoints=websecure"
             # - "traefik.http.routers.web-2.tls.certresolver=myresolver"
         volumes:
-            - ~/code/call8:/usr/share/nginx/html:rw
-            - ./dockerfiles/sites-available/call.local:/etc/nginx/sites-available/default
+            - ~/code/new-websockets:/usr/share/nginx/html:rw
+            - ./dockerfiles/sites-available/new-websockets.local:/etc/nginx/sites-available/default
           # - ~/code/new-websockets:/usr/share/nginx/html:rw
 
     mysql:
