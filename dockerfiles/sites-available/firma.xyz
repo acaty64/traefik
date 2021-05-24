@@ -5,7 +5,7 @@ server {
 
     index index.html index.htm index.php;
 
-    server_name traefik.ucssfcec.local;
+    server_name firma.ucssfcec.xyz;
 
     charset utf-8;
 

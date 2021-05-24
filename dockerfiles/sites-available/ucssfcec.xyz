@@ -5,7 +5,7 @@ server {
 
     index index.html index.htm index.php;
 
-    server_name traefik.websockets.ucssfcec.work;
+    server_name ucssfcec.xyz;
 
     charset utf-8;
 
