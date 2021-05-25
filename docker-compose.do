@@ -56,7 +56,7 @@ services:
             - ./dockerfiles/sites-available/firma.xyz:/etc/nginx/sites-available/default
 
     web-2:
-        image: acaty/new-websockets:1.0.0
+        image: acaty/call:1.0.0
         # image: api/nginx-php
         # image: api-websockets/app:latest
         # build:
