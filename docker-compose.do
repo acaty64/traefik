@@ -69,7 +69,7 @@ services:
         labels:
             - "environment=production"
             - "traefik.enable=true"
-            - "traefik.http.routers.web-2.rule=Host(`call.ucssfcec.xyz`)"
+            - "traefik.http.routers.web-2.rule=Host(`store.ucssfcec.xyz`)"
             - "--entrypoints.web.address=:80"
             - "--entryPoints.ws.address=:6001"
             # - "traefik.http.routers.web-2.entrypoints=websecure"

@@ -36,9 +36,9 @@ services:
             - "traefik.enable=true"
             - "traefik.http.routers.web-0.rule=Host(`ucssfcec.work`)"
         volumes:
-            # - ~/code/ucssfcec:/var/www/html:rw
             - ~/code/ucssfcec:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/ucssfcec.work:/etc/nginx/sites-available/default
+            - ~/code/mysql:/var/lib/mysql:rw
 
     web-1:
         image: acaty/firma:1.0.2
@@ -54,6 +54,7 @@ services:
         volumes:
             - ~/code/firma:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/firma.work:/etc/nginx/sites-available/default
+            - ~/code/mysql:/var/lib/mysql:rw
 
     web-2:
         image: acaty/call:1.0.0
@@ -77,6 +78,7 @@ services:
         volumes:
             - ~/code/call8:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/call.work:/etc/nginx/sites-available/default
+            - ~/code/mysql:/var/lib/mysql:rw
           # - ~/code/new-websockets:/usr/share/nginx/html:rw
 
     mysql:
@@ -92,7 +94,7 @@ services:
           MYSQL_USER: "${MYSQL_USER}"
           MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
         volumes:
-          - /var/lib/mysql:/var/lib/mysql
-          - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
-          - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
-
+            - ~/code/mysql:/var/lib/mysql:rw
+            # - /var/lib/mysql:/var/lib/mysql
+            - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+            - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
