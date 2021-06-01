@@ -1,67 +1,63 @@
-#docker-compose.yml
-#https://codigofacilito.com/videos/introduccion-96456894-edd1-43ed-932a-3ccc2d370c3f
-#https://stackoverflow.com/questions/63547392/traefik-2-2-docker-websocket-ws-not-xyzing
-# TRAEFIK
-
 version: '3'
 
-# Services
 services:
-    proxy:
+    reverse-proxy:
         image: traefik:v2.1
         container_name: proxy
         ports:
             - "80:80"
             - "443:443"
-            - "8080:8080"       # traefik dashboard
+            - "8080:8080"
+
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - ./traefik.yml:/traefik.yml
+            - ./acme.json:/acme.json
             - ./traefik.log:/traefik.log
+        labels:
+            - "traefik.enable=true"
 
     nginx:
         image: nginx
         container_name: nginx
         labels:
-            - "environment=dev"
             - "traefik.enable=true"
-            - "traefik.http.routers.nginx.rule=Host(`nginx.ucssfcec.xyz`)"
+            - "traefik.http.routers.nginx.rule=Host(`disponibilidad.ucssfcec.xyz`)"
+            - "traefik.http.routers.nginx.entrypoints=websecure"
+            - "traefik.http.routers.nginx.tls.certresolver=myresolver"
 
     web-0:
         image: acaty/ucssfcec:1.0.1
         container_name: nginx-ucssfcec
         restart: always
         labels:
-            - "environment=production"
+            # - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-0.rule=Host(`ucssfcec.xyz`)"
+            - "traefik.http.routers.web-0.entrypoints=websecure"
+            - "traefik.http.routers.web-0.tls.certresolver=myresolver"
         volumes:
-            # - ~/code/ucssfcec:/var/www/html:rw
             - ~/code/ucssfcec:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/ucssfcec.xyz:/etc/nginx/sites-available/default
+            - ~/code/mysql:/var/lib/mysql:rw
 
     web-1:
         image: acaty/firma:1.0.2
-        # build:
-        #   context: ./dockerfiles/nginx-php
-        #   dockerfile: Dockerfile
         container_name: nginx-firma
         restart: always
         labels:
             - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-1.rule=Host(`firma.ucssfcec.xyz`)"
+            - "traefik.http.routers.web-1.entrypoints=websecure"
+            - "traefik.http.routers.web-1.tls.certresolver=myresolver"
         volumes:
             - ~/code/firma:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/firma.xyz:/etc/nginx/sites-available/default
+            - ~/code/mysql:/var/lib/mysql:rw
 
     web-2:
         image: acaty/call:1.0.0
-        # image: api/nginx-php
-        # image: api-websockets/app:latest
-        # build:
-        #   context: ./dockerfiles/nginx-php
-        #   dockerfile: Dockerfile
         container_name: call
         restart: always
         ports:
@@ -70,29 +66,32 @@ services:
             - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-2.rule=Host(`store.ucssfcec.xyz`)"
-            - "--entrypoints.web.address=:80"
+            # - "traefik.http.routers.web-2.entrypoints=web"
+            - "traefik.http.routers.web-2.entrypoints=websecure"
+            - "traefik.http.routers.web-2.tls.certresolver=myresolver"
+            # - "--entrypoints.web.address=:80"
             - "--entryPoints.ws.address=:6001"
-            # - "traefik.http.routers.web-2.entrypoints=websecure"
-            # - "traefik.http.routers.web-2.tls.certresolver=myresolver"
         volumes:
             - ~/code/call8:/usr/share/nginx/html:rw
+            - ~/code/mysql:/var/lib/mysql:rw
             - ./dockerfiles/sites-available/call.xyz:/etc/nginx/sites-available/default
-          # - ~/code/new-websockets:/usr/share/nginx/html:rw
+            - ./dockerfiles/public/htaccess.https:/usr/share/nginx/html/public/.htaccess
 
     mysql:
         container_name: mysql
         image: mysql:5.7
+        # restart: always
         labels:
-            - "environment=production"
+            # - "environment=production"
             - "traefik.enable=true"
         ports:
-          - "${DB_PORT}:3306"
+            - "${DB_PORT}:3306"
         environment:
-          MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-          MYSQL_USER: "${MYSQL_USER}"
-          MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+            MYSQL_USER: "${MYSQL_USER}"
+            MYSQL_ROOT_PASSWORD: "ucss20505378629"
+            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
         volumes:
-          - /var/lib/mysql:/var/lib/mysql
-          - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
-          - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
+            - ~/code/mysql:/var/lib/mysql:rw
+            - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+            - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
 

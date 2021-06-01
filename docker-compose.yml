@@ -57,7 +57,7 @@ services:
             - ~/code/mysql:/var/lib/mysql:rw
 
     web-2:
-        image: acaty/call:1.0.0
+        image: acaty/call:1.0.1
         # image: api/nginx-php
         # image: api-websockets/app:latest
         # build:
@@ -71,7 +71,8 @@ services:
             - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-2.rule=Host(`call.ucssfcec.work`)"
-            - "--entrypoints.web.address=:80"
+            - "traefik.http.routers.web-2.entrypoints=web"
+            # - "--entrypoints.web.address=:80"
             - "--entryPoints.ws.address=:6001"
             # - "traefik.http.routers.web-2.entrypoints=websecure"
             # - "traefik.http.routers.web-2.tls.certresolver=myresolver"
