@@ -8,14 +8,27 @@ services:
             - "80:80"
             - "443:443"
             - "8080:8080"
-
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - ./traefik.yml:/traefik.yml
-            - ./acme.json:/acme.json
             - ./traefik.log:/traefik.log
+            - ./letsencrypt:/letsencrypt
         labels:
             - "traefik.enable=true"
+
+    traefik-certs-dumper:
+        image: ldez/traefik-certs-dumper:v2.7.4
+        container_name: traefik-certs-dumper
+        entrypoint: sh -c '
+          apk add jq
+          ; while ! [ -e /data/acme.json ]
+          || ! [ `jq ".[] | .Certificates | length" /data/acme.json` != 0 ]; do
+          sleep 1
+          ; done
+          && traefik-certs-dumper file --version v2 --watch
+          --source /data/acme.json --dest /data/certs'
+        volumes:
+          - ./letsencrypt:/data
 
     nginx:
         image: nginx
@@ -28,10 +41,9 @@ services:
 
     web-0:
         image: acaty/ucssfcec:1.0.1
-        container_name: nginx-ucssfcec
+        container_name: ucssfcec
         restart: always
         labels:
-            # - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-0.rule=Host(`ucssfcec.xyz`)"
             - "traefik.http.routers.web-0.entrypoints=websecure"
@@ -43,10 +55,9 @@ services:
 
     web-1:
         image: acaty/firma:1.0.2
-        container_name: nginx-firma
+        container_name: firma
         restart: always
         labels:
-            - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-1.rule=Host(`firma.ucssfcec.xyz`)"
             - "traefik.http.routers.web-1.entrypoints=websecure"
@@ -63,7 +74,6 @@ services:
         ports:
             - "6001:6001"
         labels:
-            - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-2.rule=Host(`store.ucssfcec.xyz`)"
             # - "traefik.http.routers.web-2.entrypoints=web"
@@ -75,14 +85,14 @@ services:
             - ~/code/call8:/usr/share/nginx/html:rw
             - ~/code/mysql:/var/lib/mysql:rw
             - ./dockerfiles/sites-available/call.xyz:/etc/nginx/sites-available/default
-            - ./dockerfiles/public/htaccess.https:/usr/share/nginx/html/public/.htaccess
+            - ./dockerfiles/public/.htaccess:/usr/share/nginx/html/public/.htaccess
+            - ./letsencrypt:/letsencrypt
 
     mysql:
         container_name: mysql
         image: mysql:5.7
         # restart: always
         labels:
-            # - "environment=production"
             - "traefik.enable=true"
         ports:
             - "${DB_PORT}:3306"

@@ -18,6 +18,21 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             - ./traefik.yml:/traefik.yml
             - ./traefik.log:/traefik.log
+            - ./letsencrypt:/letsencrypt
+
+    traefik-certs-dumper:
+        image: ldez/traefik-certs-dumper:v2.7.4
+        container_name: traefik-certs-dumper
+        entrypoint: sh -c '
+          apk add jq
+          ; while ! [ -e /data/acme.json ]
+          || ! [ `jq ".[] | .Certificates | length" /data/acme.json` != 0 ]; do
+          sleep 1
+          ; done
+          && traefik-certs-dumper file --version v2 --watch
+          --source /data/acme.json --dest /data/certs'
+        volumes:
+          - ./letsencrypt:/data
 
     nginx:
         image: nginx
@@ -29,7 +44,7 @@ services:
 
     web-0:
         image: acaty/ucssfcec:1.0.1
-        container_name: nginx-ucssfcec
+        container_name: ucssfcec
         restart: always
         labels:
             - "environment=production"
@@ -42,10 +57,7 @@ services:
 
     web-1:
         image: acaty/firma:1.0.2
-        # build:
-        #   context: ./dockerfiles/nginx-php
-        #   dockerfile: Dockerfile
-        container_name: nginx-firma
+        container_name: firma
         restart: always
         labels:
             - "environment=production"
@@ -58,11 +70,6 @@ services:
 
     web-2:
         image: acaty/call:1.0.1
-        # image: api/nginx-php
-        # image: api-websockets/app:latest
-        # build:
-        #   context: ./dockerfiles/nginx-php
-        #   dockerfile: Dockerfile
         container_name: call
         restart: always
         ports:
@@ -80,6 +87,7 @@ services:
             - ~/code/call8:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/call.work:/etc/nginx/sites-available/default
             - ~/code/mysql:/var/lib/mysql:rw
+            - ./letsencrypt:/letsencrypt
           # - ~/code/new-websockets:/usr/share/nginx/html:rw
 
     mysql:
@@ -96,6 +104,5 @@ services:
           MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
         volumes:
             - ~/code/mysql:/var/lib/mysql:rw
-            # - /var/lib/mysql:/var/lib/mysql
             - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
             - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
