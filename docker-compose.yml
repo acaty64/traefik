@@ -123,6 +123,7 @@ services:
             # - ./dockerfiles/public/.htaccess:/usr/share/nginx/html/public/.htaccess
             # - ./dockerfiles/public/call8/index.php:/usr/share/nginx/html/public/index.php
 
+
     redis:
         container_name: redis
         image: redis:alpine
