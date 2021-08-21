@@ -21,11 +21,10 @@ providers:
 certificatesResolvers:
     myresolver:
         acme:
-            email: acaty2@gmail.com
-            storage: ./letsencrypt/acme.json
-            tlsChallenge: true
-            # httpChallenge:
-            #     entryPoint: web
+            email: ana.arashiro@gmail.com
+            storage: /letsencrypt/acme.json
+            httpChallenge:
+                entryPoint: web
 
 log:
     filePath: "traefik.log"

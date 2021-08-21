@@ -23,4 +23,10 @@
     RewriteCond %{HTTPS} !=on
     RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
 
+    php_value upload_max_filesize 32M
+    php_value post_max_size 64M
+    php_value memory_limit 128M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+
 </IfModule>

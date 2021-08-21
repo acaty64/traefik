@@ -1,263 +1,495 @@
-<<<<<<< HEAD
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-03T18:51:44Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-06-03T18:51:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-03T19:02:40Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:23:23Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-06-03T19:23:23Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-03T19:31:48Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-06-03T19:31:48Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-03T19:37:15Z"}
-=======
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-25T15:33:03Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-25T15:33:04Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-25T15:33:03Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-25T15:33:03Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-25T15:33:04Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-25T15:33:04Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-25T15:33:04Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-25T15:33:04Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-26T01:25:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-26T05:41:58Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-27T02:58:34Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-27T05:04:20Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-05-27T05:04:20Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-27T17:01:53Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-27T18:12:11Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-27T19:23:41Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-28T02:50:58Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-28T04:58:14Z"}
-{"level":"error","msg":"Failed to list containers for docker, error error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json?limit=0\": context canceled","providerName":"docker","time":"2021-05-28T04:58:14Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-29T03:38:24Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T03:05:28Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:11:50Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:24:47Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-05-31T03:24:47Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T03:53:59Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T06:36:44Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-05-31T06:36:45Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T06:49:44Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T13:07:54Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T13:37:42Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T13:59:49Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-05-31T13:59:49Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-05-31T16:33:20Z"}
-{"level":"error","msg":"Failed to list containers for docker, error error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json?limit=0\": context canceled","providerName":"docker","time":"2021-05-31T16:33:20Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-05-31T16:33:20Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-01T01:04:43Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-06-01T01:04:43Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-01T01:09:49Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-01T03:32:50Z"}
-{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-06-01T03:32:50Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-01T16:12:48Z"}
-{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"ws","level":"error","msg":"accept tcp [::]:6001: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"ws","level":"error","msg":"close tcp [::]:6001: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-06-01T16:51:43Z"}
-{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-06-01T16:51:43Z"}
->>>>>>> 6b2c0b98125de27df7b1d9b957a192cf453b8edf
+{"container":"node-traefik-b3de1cdabb6b3f725943efc15ba52873be3d638b51f1a9ec9dd6c1795ff7ff2a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-02T20:52:05Z"}
+{"container":"node-traefik-320cdfbff48a036745d9a480478b56ddbc9869f8171643c377447ade70ed5e0a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-02T20:56:23Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-02T21:22:15Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-02T21:22:15Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-02T21:22:15Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-02T21:22:15Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-02T21:22:15Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-02T21:22:15Z"}
+{"container":"node-traefik-26e15f23e4ea7dd3c0c0043899ac726e5fdff3c10212d4f7c2f423c1b7364b9e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-02T22:30:39Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-03T03:39:25Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-03T03:39:25Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-03T03:39:25Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-03T03:39:25Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-03T03:39:25Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-03T03:39:25Z"}
+{"container":"node-traefik-f8361926c46976d83e4e349e0de2387d4c1723b54dde8be0f6777b862f85cd16","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-03T15:01:28Z"}
+{"container":"node-traefik-f8361926c46976d83e4e349e0de2387d4c1723b54dde8be0f6777b862f85cd16","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-03T15:31:49Z"}
+{"container":"node-traefik-f8361926c46976d83e4e349e0de2387d4c1723b54dde8be0f6777b862f85cd16","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-03T15:32:00Z"}
+{"container":"node-traefik-cf24362fb26e9f16da12a2127bab9686cc10ecad6552c4b41305588b7653859a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-03T20:58:55Z"}
+{"container":"node-traefik-ff130cee821c5e2809a7771cd0c48ae8ad74fc8235a8ff229d967899b8bcfb4c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-03T21:01:40Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-04T05:17:57Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-04T05:17:57Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-04T05:17:57Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-04T05:17:57Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-04T05:17:57Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-04T05:17:57Z"}
+{"container":"node-traefik-b31d0bccbf29ad8efba98aac7f47c7e18d91fb0296171d5b3dea39142e0d381f","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-04T13:21:20Z"}
+{"container":"node-traefik-ce1a94b2036a37d353c1ba74bc95cd7b3b578cf82c279410139cf792e2032f2a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:23:25Z"}
+{"container":"coturn-traefik-d3946fd63c975630dcf18c2ad277700d50d67e19fb1a0aaf0d88007d0e8ba6c4","level":"error","msg":"service \"coturn-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:25:00Z"}
+{"container":"node-traefik-ce1a94b2036a37d353c1ba74bc95cd7b3b578cf82c279410139cf792e2032f2a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:25:00Z"}
+{"container":"node-traefik-ce1a94b2036a37d353c1ba74bc95cd7b3b578cf82c279410139cf792e2032f2a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:29:26Z"}
+{"container":"node-traefik-ce1a94b2036a37d353c1ba74bc95cd7b3b578cf82c279410139cf792e2032f2a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:29:40Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-05T01:32:21Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-05T01:32:21Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-05T01:32:21Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-05T01:32:21Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-05T01:32:21Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-05T01:32:21Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-05T01:32:21Z"}
+{"container":"node-traefik-19982850ff4e46a32be6638a96e8f81569f15ceeaed52a4fb5746ae26f5e53e0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:34:11Z"}
+{"container":"node-traefik-19982850ff4e46a32be6638a96e8f81569f15ceeaed52a4fb5746ae26f5e53e0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:34:13Z"}
+{"container":"node-traefik-19982850ff4e46a32be6638a96e8f81569f15ceeaed52a4fb5746ae26f5e53e0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:34:29Z"}
+{"container":"node-traefik-19982850ff4e46a32be6638a96e8f81569f15ceeaed52a4fb5746ae26f5e53e0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:34:29Z"}
+{"container":"node-traefik-19982850ff4e46a32be6638a96e8f81569f15ceeaed52a4fb5746ae26f5e53e0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:34:29Z"}
+{"container":"node-traefik-19982850ff4e46a32be6638a96e8f81569f15ceeaed52a4fb5746ae26f5e53e0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T01:34:29Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-05T02:03:31Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-05T02:03:31Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-05T02:03:31Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-05T02:03:31Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-05T02:03:31Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-05T02:03:31Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-05T02:03:31Z"}
+{"container":"node-traefik-20a89e82118c2bfb0e02287866ac5449bba233e3a8601fff76f4c8dadf01410b","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-05T23:17:53Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-05T23:18:11Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-05T23:18:11Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-05T23:18:11Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-05T23:18:11Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-05T23:18:11Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-05T23:18:11Z"}
+{"container":"node-traefik-1723852daba24358717a11c4f1cb0b12d673fbb413954a29c2dba1df313fc978","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T16:50:33Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-11T16:59:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-11T16:59:54Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-11T16:59:54Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-11T16:59:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-11T16:59:54Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-11T16:59:54Z"}
+{"container":"node-traefik-5c0a1743e461bb1e8ff4c8ec9b076688395d82d2a96d6d668f994963012ffef5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:01:27Z"}
+{"container":"node-traefik-5c0a1743e461bb1e8ff4c8ec9b076688395d82d2a96d6d668f994963012ffef5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:01:28Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-11T17:04:21Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-11T17:04:21Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-11T17:04:21Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-11T17:04:21Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:04:21Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:04:21Z"}
+{"container":"node-traefik-5c0a1743e461bb1e8ff4c8ec9b076688395d82d2a96d6d668f994963012ffef5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:04:21Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-11T17:04:21Z"}
+{"container":"node-traefik-f86410840d2f9f13f2a9eec99f00339496c2d7df3817ed89ca6e10fd01ec52f5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:05:47Z"}
+{"container":"node-traefik-f86410840d2f9f13f2a9eec99f00339496c2d7df3817ed89ca6e10fd01ec52f5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:05:48Z"}
+{"container":"node-traefik-f86410840d2f9f13f2a9eec99f00339496c2d7df3817ed89ca6e10fd01ec52f5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:05:50Z"}
+{"container":"node-traefik-f86410840d2f9f13f2a9eec99f00339496c2d7df3817ed89ca6e10fd01ec52f5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:05:50Z"}
+{"container":"node-traefik-f86410840d2f9f13f2a9eec99f00339496c2d7df3817ed89ca6e10fd01ec52f5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:05:51Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-11T17:13:55Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:13:55Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-11T17:13:55Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-11T17:13:55Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-11T17:13:55Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:13:55Z"}
+{"container":"node-traefik-6b4178cdf8d5e2dba10ce3a3861f2ae1c35c53f36bed2f1f6ad2120d2b60cba3","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:15:04Z"}
+{"container":"node-traefik-6b4178cdf8d5e2dba10ce3a3861f2ae1c35c53f36bed2f1f6ad2120d2b60cba3","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:15:12Z"}
+{"container":"node-traefik-6b4178cdf8d5e2dba10ce3a3861f2ae1c35c53f36bed2f1f6ad2120d2b60cba3","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:15:16Z"}
+{"container":"node-traefik-6b4178cdf8d5e2dba10ce3a3861f2ae1c35c53f36bed2f1f6ad2120d2b60cba3","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:15:16Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-11T17:18:07Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:18:07Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-11T17:18:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-11T17:18:07Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:18:07Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-11T17:18:07Z"}
+{"container":"node-traefik-be72347b136a7a2c6d5de3b2c9141f446f6a67d05cd7c31d14feb1293d99ccdc","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:19:49Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-11T17:21:30Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-11T17:21:30Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-11T17:21:30Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:21:30Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:21:30Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-11T17:21:30Z"}
+{"container":"node-traefik-be72347b136a7a2c6d5de3b2c9141f446f6a67d05cd7c31d14feb1293d99ccdc","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:21:31Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-11T17:21:31Z"}
+{"container":"node-traefik-715af6ecca17f0c9bbd9bd0161d107f2723808808702a232a30c1fe7538aea94","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:22:34Z"}
+{"container":"node-traefik-715af6ecca17f0c9bbd9bd0161d107f2723808808702a232a30c1fe7538aea94","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:22:36Z"}
+{"container":"node-traefik-715af6ecca17f0c9bbd9bd0161d107f2723808808702a232a30c1fe7538aea94","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:22:43Z"}
+{"container":"node-traefik-715af6ecca17f0c9bbd9bd0161d107f2723808808702a232a30c1fe7538aea94","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:22:44Z"}
+{"container":"node-traefik-715af6ecca17f0c9bbd9bd0161d107f2723808808702a232a30c1fe7538aea94","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-11T17:22:47Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:44:00Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-11T17:44:00Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-11T17:44:00Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-11T17:44:00Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-11T17:44:00Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-11T17:44:00Z"}
+{"container":"node-traefik-199a23ead0740dec240d9c40efd95a33f122a6c73608092d0d107b4d2a68744a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-12T13:51:48Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-12T14:29:53Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-12T14:29:53Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-12T14:29:53Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-12T14:29:53Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-12T14:29:53Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-12T14:29:53Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-12T14:29:54Z"}
+{"container":"node-traefik-f6242d73599cced827b27c55c87614e751a83dd25e38fb38bade08acb92bb91e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-12T16:48:22Z"}
+{"level":"error","msg":"Provider connection error unexpected EOF, retrying in 282.818509ms","providerName":"docker","time":"2021-07-12T18:51:53Z"}
+{"level":"error","msg":"Failed to retrieve information of the docker client and server host: error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/version\": EOF","providerName":"docker","time":"2021-07-12T18:51:56Z"}
+{"level":"error","msg":"Provider connection error error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/version\": EOF, retrying in 492.389441ms","providerName":"docker","time":"2021-07-12T18:51:56Z"}
+{"level":"error","msg":"Failed to retrieve information of the docker client and server host: error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/version\": EOF","providerName":"docker","time":"2021-07-12T18:51:56Z"}
+{"level":"error","msg":"Provider connection error error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/version\": EOF, retrying in 671.590708ms","providerName":"docker","time":"2021-07-12T18:51:56Z"}
+{"level":"error","msg":"Failed to retrieve information of the docker client and server host: error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/version\": EOF","providerName":"docker","time":"2021-07-12T18:51:57Z"}
+{"level":"error","msg":"Provider connection error error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/version\": EOF, retrying in 1.351538765s","providerName":"docker","time":"2021-07-12T18:51:57Z"}
+{"level":"error","msg":"Failed to retrieve information of the docker client and server host: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?","providerName":"docker","time":"2021-07-12T18:51:58Z"}
+{"level":"error","msg":"Provider connection error Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?, retrying in 2.569756966s","providerName":"docker","time":"2021-07-12T18:51:58Z"}
+{"level":"error","msg":"Failed to retrieve information of the docker client and server host: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?","providerName":"docker","time":"2021-07-12T18:52:01Z"}
+{"level":"error","msg":"Provider connection error Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?, retrying in 4.987726727s","providerName":"docker","time":"2021-07-12T18:52:01Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-12T18:52:03Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-12T18:52:03Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-12T18:52:03Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-12T18:52:04Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-12T18:52:04Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-12T18:52:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-12T18:52:04Z"}
+{"container":"node-traefik-f6242d73599cced827b27c55c87614e751a83dd25e38fb38bade08acb92bb91e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-13T01:22:16Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-13T03:33:05Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-13T03:33:05Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-13T03:33:05Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-13T03:33:05Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-13T03:33:05Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-13T03:33:05Z"}
+{"container":"node-traefik-f6242d73599cced827b27c55c87614e751a83dd25e38fb38bade08acb92bb91e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-13T13:49:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-13T16:12:43Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-13T16:12:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-13T16:12:43Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-13T16:12:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-13T16:12:43Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-13T16:12:43Z"}
+{"container":"node-traefik-f46f6b130c49117826db91ef73e1586c642c88423e492c088f849b524a7ad78a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-13T20:15:46Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-13T21:00:54Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-13T21:00:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-13T21:00:54Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-13T21:00:54Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-13T21:00:54Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-13T21:00:54Z"}
+{"container":"node-traefik-65716493e26f1042487816a8e53c6900440894ae9d074f43f352443e5659bf33","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-14T00:57:37Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-14T03:15:58Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-14T03:15:58Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-14T03:15:58Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-14T03:15:58Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-14T03:15:58Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-14T03:15:58Z"}
+{"container":"node-traefik-65716493e26f1042487816a8e53c6900440894ae9d074f43f352443e5659bf33","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-14T13:17:05Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-14T14:48:18Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-14T14:48:18Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-14T14:48:18Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-14T14:48:18Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-14T14:48:18Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-14T14:48:18Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-14T14:48:21Z"}
+{"container":"node-traefik-65716493e26f1042487816a8e53c6900440894ae9d074f43f352443e5659bf33","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-14T21:50:13Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-14T22:52:26Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-14T22:52:26Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-14T22:52:26Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-14T22:52:26Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-14T22:52:26Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-14T22:52:26Z"}
+{"container":"node-traefik-33333e812c7c5d082dfe1fb986130dcadafa51347f275094402099f2fadf6e7a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-14T23:32:40Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-15T01:35:22Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-15T01:35:22Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-15T01:35:22Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-15T01:35:22Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-15T01:35:22Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-15T01:35:22Z"}
+{"level":"error","msg":"Provider connection error unexpected EOF, retrying in 282.818509ms","providerName":"docker","time":"2021-07-15T01:35:26Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-15T01:35:26Z"}
+{"container":"node-traefik-33333e812c7c5d082dfe1fb986130dcadafa51347f275094402099f2fadf6e7a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-16T03:55:29Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-16T05:12:20Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-16T05:12:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-16T05:12:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-16T05:12:20Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-16T05:12:20Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-16T05:12:20Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-16T05:12:20Z"}
+{"container":"node-traefik-33333e812c7c5d082dfe1fb986130dcadafa51347f275094402099f2fadf6e7a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-16T13:27:45Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-16T18:06:41Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-16T18:06:41Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-16T18:06:41Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-16T18:06:41Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-16T18:06:41Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-16T18:06:41Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-16T18:06:42Z"}
+{"container":"node-traefik-33333e812c7c5d082dfe1fb986130dcadafa51347f275094402099f2fadf6e7a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-17T13:56:13Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-17T18:46:59Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-17T18:46:59Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-17T18:46:59Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-17T18:46:59Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-17T18:46:59Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-17T18:46:59Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-17T18:46:59Z"}
+{"container":"node-traefik-72d5992bb30987d4bbc423b261b1f0f74edff178dec795fc3b3465abba50d6aa","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-17T20:46:08Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-18T02:46:26Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-18T02:46:26Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-18T02:46:26Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-18T02:46:26Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-18T02:46:26Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-18T02:46:26Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-18T02:46:26Z"}
+{"container":"node-traefik-ad6d1d75c95569f1474d52e30688f301c7ff1ab64e1d5a70887384e28a2392ba","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-18T20:06:32Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-18T21:11:00Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-18T21:11:00Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-18T21:11:00Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-18T21:11:00Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-18T21:11:00Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-18T21:11:00Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-18T21:11:00Z"}
+{"container":"node-traefik-328c9087e4278e99b0ba83d1c48089aca8a4c9c35e65cceefe3b787a59661dab","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-19T01:49:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-19T05:17:35Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-19T05:17:35Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-19T05:17:35Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-19T05:17:35Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-19T05:17:35Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-19T05:17:35Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-19T05:17:35Z"}
+{"container":"node-traefik-561889dcf27e188932c217134cb62a128e197b71324ccda5a72acf77777f0cd6","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-19T15:35:55Z"}
+{"container":"node-traefik-561889dcf27e188932c217134cb62a128e197b71324ccda5a72acf77777f0cd6","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-24T21:51:33Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-24T23:53:52Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-24T23:53:52Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-24T23:53:52Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-24T23:53:52Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-24T23:53:52Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-24T23:53:52Z"}
+{"container":"node-traefik-9f63729f00480165da69e9e0c158f5bcf0799b920a6d85e632841a15842fd5ae","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-25T14:48:49Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-25T15:15:49Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-25T15:15:49Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-25T15:15:49Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-25T15:15:49Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-25T15:15:49Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-25T15:15:49Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-25T15:15:49Z"}
+{"container":"node-traefik-788305bc0b81d17f6697780e99e7ab186faa2ffb950d9941d05810e4b21b89b2","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-25T20:57:26Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-26T04:45:41Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-26T04:45:41Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-26T04:45:41Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-26T04:45:41Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-26T04:45:41Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-26T04:45:41Z"}
+{"container":"node-traefik-df703638dcd927fb7ea892fc1523cab81b22ea299f376e928dbb02edb33a3a3e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-26T13:08:35Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-26T13:08:38Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-26T13:08:38Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-26T13:08:38Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-26T13:08:38Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-26T13:08:38Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-26T13:08:38Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-26T13:08:38Z"}
+{"container":"node-traefik-df703638dcd927fb7ea892fc1523cab81b22ea299f376e928dbb02edb33a3a3e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-26T13:11:10Z"}
+{"container":"node-traefik-df703638dcd927fb7ea892fc1523cab81b22ea299f376e928dbb02edb33a3a3e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-26T13:11:11Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-26T13:13:34Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-26T13:13:34Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-26T13:13:34Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-26T13:13:34Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-26T13:13:34Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-26T13:13:34Z"}
+{"container":"node-traefik-160a202551dfc90dbee4370e753806e6b40dd4cf2d2c842048837ed76716cb68","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-26T13:14:42Z"}
+{"container":"node-traefik-160a202551dfc90dbee4370e753806e6b40dd4cf2d2c842048837ed76716cb68","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-26T13:14:42Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-27T04:25:30Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-27T04:25:30Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-27T04:25:30Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-27T04:25:30Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-27T04:25:30Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-27T04:25:30Z"}
+{"container":"node-traefik-f043ae7c475b677ca04c4b442ddf6b6b225393e43ff3d0d75b88f75132a1130d","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-27T15:46:08Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-28T02:36:52Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-28T02:36:52Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-28T02:36:52Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-28T02:36:52Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-28T02:36:52Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-28T02:36:52Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-28T02:36:54Z"}
+{"container":"node-traefik-93b34f8b39b9b1ad676a1a6405103cd6ed90fd0f0e65cc48e39c221655ef7378","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-28T03:04:17Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-28T03:42:37Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-28T03:42:37Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-28T03:42:37Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-28T03:42:37Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-28T03:42:37Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-28T03:42:37Z"}
+{"container":"node-traefik-8d29465d0b147d57b0857243b8fb580ec84b769c79435705d9f1878d41268d00","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-28T14:25:35Z"}
+{"container":"node-traefik-701073e5234d2138dcc22aee2c4ab39473533ed5c06d99276ded14a0ec6f3d85","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-28T23:46:42Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-29T02:23:28Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-29T02:23:28Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-29T02:23:28Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-29T02:23:28Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-29T02:23:28Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-29T02:23:28Z"}
+{"container":"node-traefik-33cd51bdb4cd13d4ebbacdabcd2d0956608d2a9be30798cf0e7f2c9fc87a85eb","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-29T16:51:42Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-29T20:33:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-29T20:33:07Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-29T20:33:07Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-29T20:33:07Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-29T20:33:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-29T20:33:07Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-29T20:33:08Z"}
+{"container":"node-traefik-0a90650d82d8c93b1549b52720081ecbfd661937ad985802c02f5a1f4fa3b905","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-30T02:19:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-30T03:51:42Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-30T03:51:42Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-30T03:51:42Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-30T03:51:42Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-30T03:51:42Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-30T03:51:42Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-30T03:51:42Z"}
+{"container":"node-traefik-3402399cb099851a36d549fa7e306e16a5ef29c17de058fc0c19b8752061c061","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-30T22:56:55Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-31T02:22:34Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-31T02:22:34Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-31T02:22:34Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-31T02:22:34Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-31T02:22:34Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-31T02:22:34Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-07-31T02:22:36Z"}
+{"container":"node-traefik-9683a7f5ef7b2ebf130b1a5de4b6db42811805b301007f165263be3f6477bdc0","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-07-31T14:14:20Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-07-31T18:38:22Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-07-31T18:38:22Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-07-31T18:38:22Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-07-31T18:38:22Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-07-31T18:38:22Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-07-31T18:38:22Z"}
+{"level":"error","msg":"Failed to list containers for docker, error error during connect: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json?limit=0\": context canceled","providerName":"docker","time":"2021-07-31T18:38:24Z"}
+{"container":"node-traefik-b20bf28fda7402a9b3384767c08928116be7ab1a75ad025b2d6fafc64c1eb8cb","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-01T00:02:10Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-01T02:17:34Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-01T02:17:34Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-01T02:17:34Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-01T02:17:34Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-01T02:17:34Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-01T02:17:34Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-08-01T02:17:34Z"}
+{"container":"node-traefik-a6be5823993dc16b264feaba54f121e17ab3160986255fac3f1b5e6d370da7c8","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-01T14:57:39Z"}
+{"container":"node-traefik-22682c9c4b749d674498c744483ea885c1ad6f03f9414b51db37be07d70c3476","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-02T00:21:53Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-02T01:33:08Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-02T01:33:08Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-02T01:33:08Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-02T01:33:08Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-02T01:33:08Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-02T01:33:08Z"}
+{"container":"node-traefik-e7a4d7c98abe503ba40e061e44c88ce2f9bfbb5a7c13a6e09c50d56ec66d8db2","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-02T21:40:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-03T03:31:07Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-03T03:31:07Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-03T03:31:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-03T03:31:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-03T03:31:07Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-03T03:31:07Z"}
+{"container":"node-traefik-a05c4e02a7fab97439cdd5de38999520d77fa779f16176c850e84b5f342dd059","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-03T23:50:37Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-04T03:48:18Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-04T03:48:18Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-04T03:48:18Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-04T03:48:18Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-04T03:48:18Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-04T03:48:18Z"}
+{"container":"node-traefik-0fd0820ed5d51524107aea653cd6b4633a24eae23e375bd2555490332d5834fa","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-04T16:06:45Z"}
+{"container":"node-traefik-98f9b96c3f3dd394ba0ccd517fa8fa06477b74fef855c4b5454f2dc7156405f4","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T12:58:11Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-05T13:04:20Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-05T13:04:20Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-05T13:04:20Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-05T13:04:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-05T13:04:20Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-05T13:04:20Z"}
+{"container":"node-traefik-98f9b96c3f3dd394ba0ccd517fa8fa06477b74fef855c4b5454f2dc7156405f4","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:04:25Z"}
+{"container":"node-traefik-fb9d0f6f2223f263306d0124784ee4f1a1c02bba835788724f61541bfa0ea15f","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:05:12Z"}
+{"container":"node-traefik-fb9d0f6f2223f263306d0124784ee4f1a1c02bba835788724f61541bfa0ea15f","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:05:13Z"}
+{"container":"node-traefik-fb9d0f6f2223f263306d0124784ee4f1a1c02bba835788724f61541bfa0ea15f","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:05:15Z"}
+{"container":"node-traefik-fb9d0f6f2223f263306d0124784ee4f1a1c02bba835788724f61541bfa0ea15f","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:05:15Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-05T13:22:48Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-05T13:22:48Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-05T13:22:48Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-05T13:22:48Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-05T13:22:48Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-05T13:22:48Z"}
+{"container":"node-traefik-890ae0819d9a65b49b705cc09e989c2ef8d4020e1661c2d0ae99f122b2d6fb0e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:31:00Z"}
+{"container":"node-traefik-890ae0819d9a65b49b705cc09e989c2ef8d4020e1661c2d0ae99f122b2d6fb0e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:31:01Z"}
+{"container":"node-traefik-890ae0819d9a65b49b705cc09e989c2ef8d4020e1661c2d0ae99f122b2d6fb0e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:31:02Z"}
+{"container":"node-traefik-890ae0819d9a65b49b705cc09e989c2ef8d4020e1661c2d0ae99f122b2d6fb0e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:31:09Z"}
+{"container":"node-traefik-890ae0819d9a65b49b705cc09e989c2ef8d4020e1661c2d0ae99f122b2d6fb0e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:31:11Z"}
+{"container":"node-traefik-890ae0819d9a65b49b705cc09e989c2ef8d4020e1661c2d0ae99f122b2d6fb0e","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T13:31:11Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-05T16:30:07Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-05T16:30:07Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-05T16:30:07Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-05T16:30:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-05T16:30:07Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-05T16:30:07Z"}
+{"container":"node-traefik-be82d0a476c2417f73227ccc52167a1b22e86c77ceb73f8292c6a4cc1fcf1bf9","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T16:32:36Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-05T18:55:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-05T18:55:43Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-05T18:55:43Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-05T18:55:43Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-05T18:55:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-05T18:55:43Z"}
+{"container":"node-traefik-77585d63ce53da4d000e71fa4b96e69641a33e8c9e0a877d9eea0045fce3a0f1","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T18:59:14Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-05T19:20:06Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-05T19:20:06Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-05T19:20:06Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-05T19:20:06Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-05T19:20:06Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-05T19:20:06Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-08-05T19:20:06Z"}
+{"container":"node-traefik-f1b2b46e32366b90b147b5668f34b932b51caa22044164053271a6c6ad6ee29c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T19:21:39Z"}
+{"container":"node-traefik-f33fc76d70d73fcff981c7ef15ae1949d4bee470a670dd37a3b1ea921dc5580a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-05T21:18:29Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-06T02:53:51Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-06T02:53:51Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-06T02:53:51Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-06T02:53:51Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-06T02:53:51Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-06T02:53:51Z"}
+{"container":"node-traefik-bf58ac64359dcf83e15ba156e9ae7935add067e8cfe4e12dc35e73564526c112","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-06T13:33:00Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-07T03:47:12Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-07T03:47:12Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-07T03:47:12Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-07T03:47:12Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-07T03:47:12Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-07T03:47:12Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-08-07T03:47:12Z"}
+{"container":"node-traefik-260355250b6892ebdba5acacd1e038a4169ba7b6f29ef7732cfa69df1448b8b5","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-08T16:29:30Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-08T19:32:40Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-08T19:32:40Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-08T19:32:40Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-08T19:32:40Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-08T19:32:40Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-08T19:32:40Z"}
+{"container":"node-traefik-77304e1b910b77d3b7003ffa582663251e88e90e1a7bb00a005fe5d261ec7b7c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-11T16:30:15Z"}
+{"container":"node-traefik-77304e1b910b77d3b7003ffa582663251e88e90e1a7bb00a005fe5d261ec7b7c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-13T13:34:07Z"}
+{"container":"node-traefik-a5b1c037d596f297a299ce968f19aa2242f4ab94ee5029741d0d9f7d1935b92c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-14T00:21:02Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-14T01:28:37Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-14T01:28:37Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-14T01:28:37Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-14T01:28:37Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-14T01:28:37Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-14T01:28:37Z"}
+{"container":"node-traefik-c1e42d7fc8d268e32f5e0fbbde6a3599a9635a288e78e2e0e23035856ce4b5e1","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-14T03:40:29Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-14T05:09:11Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-14T05:09:11Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-14T05:09:11Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-14T05:09:11Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-14T05:09:11Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-14T05:09:11Z"}
+{"container":"node-traefik-0d7d37ef04300e9447c1ee7ac5ac6038e8fece3832b1a7e03ccacd2f6577e01a","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-14T23:52:45Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-15T04:19:04Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-15T04:19:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-15T04:19:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-15T04:19:04Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-15T04:19:04Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-15T04:19:04Z"}
+{"container":"node-traefik-5938ca79fe3ad79c1a72e8da5c378f4ba7e1fc7475125939fa16c92472c60142","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-15T15:25:02Z"}
+{"container":"node-traefik-af02956adbde8f79171c06bb1a15c19aee0c06244cb23383bb12dd4fac01250c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-17T20:07:01Z"}
+{"container":"node-traefik-af02956adbde8f79171c06bb1a15c19aee0c06244cb23383bb12dd4fac01250c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-18T13:20:22Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-18T17:20:08Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-18T17:20:08Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-18T17:20:08Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-18T17:20:08Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-18T17:20:08Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-18T17:20:08Z"}
+{"container":"node-traefik-af02956adbde8f79171c06bb1a15c19aee0c06244cb23383bb12dd4fac01250c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-18T17:20:11Z"}
+{"level":"error","msg":"Cannot connect to docker server context canceled","providerName":"docker","time":"2021-08-18T17:20:11Z"}
+{"container":"node-traefik-75422c0a8f523c42a6376ddd068eb760f960e2c91f2083e55793508b36416b4c","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-18T17:21:44Z"}
+{"container":"node-traefik-fdc33fd76de67ef1e2d2bbf6afbeb13ccd9f0237421a3860e993f1ab351172d7","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-19T00:22:17Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-19T04:11:43Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-19T04:11:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-19T04:11:43Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-19T04:11:43Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-19T04:11:43Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-19T04:11:43Z"}
+{"container":"node-traefik-54ee5fcfe9719968276e09537b2cd767492078124f214072a16fe7334fde85d2","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-19T19:42:11Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2021-08-19T23:19:12Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2021-08-19T23:19:12Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2021-08-19T23:19:12Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2021-08-19T23:19:12Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2021-08-19T23:19:12Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2021-08-19T23:19:12Z"}
+{"container":"node-traefik-61beaea9a2667ae789ec0e3aa64c804736b183d2a6aeb301b05e2287c2cac7a4","level":"error","msg":"service \"node-traefik\" error: port is missing","providerName":"docker","time":"2021-08-21T00:37:56Z"}

@@ -13,7 +13,9 @@ export MYSQL_PASSWORD=${DB_PASSWORD}
 # Firma
 # export APP="web-1"
 # Call8
-export APP="web-2"
+# export APP="web-2"
+# Examen
+export APP="web-3"
 
 COMPOSE="docker-compose"
 PSRESULT=$(docker-compose ps -q)

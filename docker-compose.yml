@@ -20,19 +20,29 @@ services:
             - ./traefik.log:/traefik.log
             - ./letsencrypt:/letsencrypt
 
-    traefik-certs-dumper:
-        image: ldez/traefik-certs-dumper:v2.7.4
-        container_name: traefik-certs-dumper
-        entrypoint: sh -c '
-          apk add jq
-          ; while ! [ -e /data/acme.json ]
-          || ! [ `jq ".[] | .Certificates | length" /data/acme.json` != 0 ]; do
-          sleep 1
-          ; done
-          && traefik-certs-dumper file --version v2 --watch
-          --source /data/acme.json --dest /data/certs'
-        volumes:
-          - ./letsencrypt:/data
+    # traefik-certs-dumper:
+    #     image: ldez/traefik-certs-dumper:v2.7.4
+    #     container_name: traefik-certs-dumper
+    #     entrypoint: sh -c '
+    #       apk add jq
+    #       ; while ! [ -e /data/acme.json ]
+    #       || ! [ `jq ".[] | .Certificates | length" /data/acme.json` != 0 ]; do
+    #       sleep 1
+    #       ; done
+    #       && traefik-certs-dumper file --version v2 --watch
+    #       --source /data/acme.json --dest /data/certs'
+    #     volumes:
+    #       - ./letsencrypt:/data
+
+    # coturn:
+    #     image: acaty/coturn
+    #     restart: unless-stopped
+    #     ports:
+    #         - "3478:3478"
+    #         - "5349:5349"
+    #     container_name: coturn
+    #     labels:
+    #         - "traefik.enable=true"
 
     nginx:
         image: nginx
@@ -53,7 +63,8 @@ services:
         volumes:
             - ~/code/ucssfcec:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/ucssfcec.work:/etc/nginx/sites-available/default
-            - ~/code/mysql:/var/lib/mysql:rw
+            # - ~/code/mysql:/var/lib/mysql:rw
+            - /var/lib/mysql:/var/lib/mysql
 
     web-1:
         image: acaty/firma:1.0.2
@@ -66,43 +77,97 @@ services:
         volumes:
             - ~/code/firma:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/firma.work:/etc/nginx/sites-available/default
-            - ~/code/mysql:/var/lib/mysql:rw
+            - ./dockerfiles/php/local.ini:/etc/php/7.3/fpm/conf.d/local.ini
+            # - ~/code/mysql:/var/lib/mysql:rw
+            - /var/lib/mysql:/var/lib/mysql
 
     web-2:
-        image: acaty/call:1.0.1
+        image: acaty/call8:latest
+        # image: acaty/call:1.0.0
         container_name: call
         restart: always
         ports:
-            - "6001:6001"
+            - "6001:6001"   # Laravel-websockets
         labels:
             - "environment=production"
             - "traefik.enable=true"
             - "traefik.http.routers.web-2.rule=Host(`call.ucssfcec.work`)"
             - "traefik.http.routers.web-2.entrypoints=web"
-            # - "--entrypoints.web.address=:80"
-            - "--entryPoints.ws.address=:6001"
             # - "traefik.http.routers.web-2.entrypoints=websecure"
             # - "traefik.http.routers.web-2.tls.certresolver=myresolver"
         volumes:
             - ~/code/call8:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/call.work:/etc/nginx/sites-available/default
-            - ~/code/mysql:/var/lib/mysql:rw
+            # - ~/code/mysql:/var/lib/mysql:rw
+            - /var/lib/mysql:/var/lib/mysql
             - ./letsencrypt:/letsencrypt
-          # - ~/code/new-websockets:/usr/share/nginx/html:rw
+            # - ./dockerfiles/public/.htaccess:/usr/share/nginx/html/public/.htaccess
+            # - ./dockerfiles/public/call8/index.php:/usr/share/nginx/html/public/index.php
+
+    web-3:
+        image: acaty/call:1.0.0
+        container_name: examen
+        restart: always
+        labels:
+            - "environment=production"
+            - "traefik.enable=true"
+            - "traefik.http.routers.web-3.rule=Host(`examen.work`)"
+            - "traefik.http.routers.web-3.entrypoints=web"
+            # - "traefik.http.routers.web-3.entrypoints=websecure"
+            # - "traefik.http.routers.web-3.tls.certresolver=myresolver"
+        volumes:
+            - ~/code/examen:/usr/share/nginx/html:rw
+            - ./dockerfiles/sites-available/call.work:/etc/nginx/sites-available/default
+            - /var/lib/mysql:/var/lib/mysql
+            # - ./letsencrypt:/letsencrypt
+            # - ./dockerfiles/public/.htaccess:/usr/share/nginx/html/public/.htaccess
+            # - ./dockerfiles/public/call8/index.php:/usr/share/nginx/html/public/index.php
+
+    redis:
+        container_name: redis
+        image: redis:alpine
+        restart: unless-stopped
+        tty: true
+        labels:
+            # - "environment=production"
+            - "traefik.enable=true"
+        volumes:
+            - redisdata:/data
 
     mysql:
         container_name: mysql
         image: mysql:5.7
+        restart: on-failure
+        restart: unless-stopped
         labels:
             - "environment=production"
             - "traefik.enable=true"
         ports:
-          - "${DB_PORT}:3306"
+            - "${DB_PORT}:3306"
         environment:
-          MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-          MYSQL_USER: "${MYSQL_USER}"
-          MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+            MYSQL_USER: "${MYSQL_USER}"
+            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
         volumes:
-            - ~/code/mysql:/var/lib/mysql:rw
+            # - ~/code/mysql:/var/lib/mysql:rw
+            - /var/lib/mysql:/var/lib/mysql
             - ./dockerfiles/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
             - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
+
+    node:
+        container_name: node
+        image: node:12.14
+        labels:
+            - "traefik.enable=true"
+        restart: unless-stopped
+        tty: true
+        working_dir: /usr/share/nginx/html
+        # working_dir: /var/www/html
+        volumes:
+            - ~/code/call8:/usr/share/nginx/html:rw
+            # - ~/code/call8:/var/www/html
+            # - ~/code/jitsi-laravel:/var/www/html
+
+volumes:
+    redisdata:
+        driver: "local"

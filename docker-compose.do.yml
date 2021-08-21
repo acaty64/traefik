@@ -8,27 +8,43 @@ services:
             - "80:80"
             - "443:443"
             - "8080:8080"
+            # - "3478:3478"
+            # - "5349:5349"
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - ./traefik.yml:/traefik.yml
             - ./traefik.log:/traefik.log
             - ./letsencrypt:/letsencrypt
-        labels:
-            - "traefik.enable=true"
+        # labels:
+        #     - "traefik.enable=true"
+            # - "traefik.wss.protocol=https"
 
-    traefik-certs-dumper:
-        image: ldez/traefik-certs-dumper:v2.7.4
-        container_name: traefik-certs-dumper
-        entrypoint: sh -c '
-          apk add jq
-          ; while ! [ -e /data/acme.json ]
-          || ! [ `jq ".[] | .Certificates | length" /data/acme.json` != 0 ]; do
-          sleep 1
-          ; done
-          && traefik-certs-dumper file --version v2 --watch
-          --source /data/acme.json --dest /data/certs'
-        volumes:
-          - ./letsencrypt:/data
+    # coturn:
+    #     image: acaty/coturn:1.0.0
+    #     restart: unless-stopped
+    #     ports:
+    #         - "3478:3478"
+    #         - "5349:5349"
+    #     container_name: coturn
+    #     labels:
+    #         - "traefik.enable=true"
+    #         - "traefik.http.routers.coturn.rule=Host(`turn.ucssfcec.xyz`)"
+    #     volumes:
+    #         - ./letsencrypt:/letsencrypt
+
+    # traefik-certs-dumper:
+    #     image: ldez/traefik-certs-dumper:v2.7.4
+    #     container_name: traefik-certs-dumper
+    #     entrypoint: sh -c '
+    #       apk add jq
+    #       ; while ! [ -e /letsencrypt/acme.json ]
+    #       || ! [ `jq ".[] | .Certificates | length" /letsencrypt/acme.json` != 0 ]; do
+    #       sleep 1
+    #       ; done
+    #       && traefik-certs-dumper file --version v2 --watch
+    #       --source /letsencrypt/acme.json --dest /letsencrypt/certs'
+    #     volumes:
+    #       - ./letsencrypt:/letsencrypt
 
     nginx:
         image: nginx
@@ -65,10 +81,13 @@ services:
         volumes:
             - ~/code/firma:/usr/share/nginx/html:rw
             - ./dockerfiles/sites-available/firma.xyz:/etc/nginx/sites-available/default
+            - ./dockerfiles/public/.htaccess:/usr/share/nginx/html/public/.htaccess
             - ~/code/mysql:/var/lib/mysql:rw
+            - ./dockerfiles/php/local.ini:/etc/php/7.3/fpm/conf.d/local.ini
 
     web-2:
         image: acaty/call:1.0.0
+        # image: acaty/call8:latest
         container_name: call
         restart: always
         ports:
@@ -79,14 +98,29 @@ services:
             # - "traefik.http.routers.web-2.entrypoints=web"
             - "traefik.http.routers.web-2.entrypoints=websecure"
             - "traefik.http.routers.web-2.tls.certresolver=myresolver"
-            # - "--entrypoints.web.address=:80"
-            - "--entryPoints.ws.address=:6001"
+            # - "traefik.http.routers.web-2.wss.entrypoint=wss"
+            # - "--entryPoints.wss.address=wss"
         volumes:
+            # - ~/code/jitsi-laravel:/usr/share/nginx/html:rw
             - ~/code/call8:/usr/share/nginx/html:rw
             - ~/code/mysql:/var/lib/mysql:rw
             - ./dockerfiles/sites-available/call.xyz:/etc/nginx/sites-available/default
             - ./dockerfiles/public/.htaccess:/usr/share/nginx/html/public/.htaccess
+            - ./dockerfiles/public/index.php:/usr/share/nginx/html/public/index.php
             - ./letsencrypt:/letsencrypt
+
+    node:
+        container_name: node
+        image: node:12.14
+        labels:
+            - "traefik.enable=true"
+        restart: unless-stopped
+        tty: true
+        working_dir: /usr/share/nginx/html
+        volumes:
+            - ~/code/call8:/usr/share/nginx/html:rw
+            # - ~/code/firma:/var/www/html
+            # - ~/code/jitsi-laravel:/var/www/html
 
     mysql:
         container_name: mysql
